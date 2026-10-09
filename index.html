@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harish Ram A N | Systems & AI Software Engineer</title>
+  <meta name="description" content="Portfolio of Harish Ram A N, B.Tech AI & DS undergraduate at National Engineering College. Systems programming (C, x86-64, GDB), full-stack backends (Flask, MySQL, Gunicorn), and cloud pipelines.">
+  <meta name="keywords" content="Harish Ram A N, AI & DS, Systems Programming, C, x86-64 Assembly, GDB, Python, Flask, MySQL, Firebase, Cloud Functions, Portfolio">
+  <meta name="author" content="Harish Ram A N">
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:title" content="Harish Ram A N - Systems & AI Software Engineer">
+  <meta property="og:description" content="Undergraduate engineer building low-level systems, robust backends, and applied AI applications.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/attendance-dashboard.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+  <!-- Sticky Engineering Navigation -->
+  <header class="site-header" id="top">
+    <div class="container nav-wrapper">
+      <a href="#top" class="brand-badge" aria-label="Harish Ram A N Home">
+        <div class="brand-monogram">HR</div>
+        <div class="brand-info">
+          <span class="brand-name">Harish Ram A N</span>
+          <span class="brand-sub">B.Tech AI&DS '27</span>
+        </div>
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#workbench" class="nav-link">Workbench</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-link" style="color:var(--accent-blue-light);font-weight:600;display:inline-flex;align-items:center;gap:0.3rem;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>Resume ↗</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-controls">
+        <!-- Command Palette Trigger -->
+        <button id="cmd-palette-btn" class="cmd-k-trigger" title="Open command palette (Ctrl+K / Cmd+K)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span class="cmd-text">Commands</span>
+          <span class="cmd-shortcut">⌘K</span>
+        </button>
+
+        <!-- Subtle Audio Feedback Toggle -->
+        <button id="audio-toggle-btn" class="theme-toggle-btn" onclick="toggleAudioFeedback()" title="Toggle tactile sound feedback" aria-label="Toggle Sound">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <line x1="23" y1="9" x2="17" y2="15"></line>
+            <line x1="17" y1="9" x2="23" y2="15"></line>
+          </svg>
+        </button>
+
+        <!-- Dark / Light Theme Toggle -->
+        <button id="theme-toggle-btn" class="theme-toggle-btn" title="Toggle theme (Light / Dark)" aria-label="Toggle Theme">
+          <span id="theme-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero-section" id="about">
+      <div class="container">
+        <div class="hero-layout">
+          <!-- Hero Left Column: Narrative & Intro -->
+          <div class="hero-content">
+            <div class="status-badge-wrapper">
+              <span class="status-dot"></span>
+              <span>Available for Internships & Engineering Roles</span>
+            </div>
+
+            <h1 class="hero-title">
+              Hi, I'm <span class="name-highlight">Harish Ram</span>.
+            </h1>
+
+            <p class="hero-lead">
+              Undergraduate in <span class="highlight">Artificial Intelligence & Data Science</span> with a deep passion for <span class="highlight">Low-Level Systems</span>, robust backends, and real-world software engineering.
+            </p>
+
+            <p class="hero-description">
+              I study at National Engineering College (2023–2027). While most modern web developers remain confined to high-level abstractions, I bridge the full spectrum: exploring memory layouts and debugging in <strong>C, x86-64 Assembly, and GDB</strong>, while architecting production web services with <strong>Python, Flask, MySQL, and Google Cloud</strong>.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">
+                <span>View Projects</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+
+              <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                <span>Resume (PDF)</span>
+              </a>
+
+              <button class="btn btn-outline" onclick="copyToClipboard('harishram2706@gmail.com', 'Email (harishram2706@gmail.com)')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <span>Copy Email</span>
+              </button>
+
+              <a href="#workbench" class="btn btn-outline">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+                <span>Workbench</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Right Column: Engineer Specification Card -->
+          <div class="engineer-spec-card">
+            <div class="spec-header">
+              <span class="spec-title">Engineer Specs & Status</span>
+              <span class="spec-location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                Tamil Nadu, India
+              </span>
+            </div>
+
+            <div class="spec-grid">
+              <div class="spec-item">
+                <span class="spec-label">Education</span>
+                <span class="spec-value">National Engineering College</span>
+                <span class="spec-pills">
+                  <span class="spec-pill pill-accent">B.Tech AI & DS</span>
+                  <span class="spec-pill">2023 – 2027</span>
+                </span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Systems & Core Foundation</span>
+                <div class="spec-pills">
+                  <span class="spec-pill pill-accent">C Language</span>
+                  <span class="spec-pill pill-accent">X86-64 Assembly</span>
+                  <span class="spec-pill">GDB Debugger</span>
+                  <span class="spec-pill">Computer Networks</span>
+                </div>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Backend & Cloud Stacks</span>
+                <div class="spec-pills">
+                  <span class="spec-pill">Python</span>
+                  <span class="spec-pill">Flask</span>
+                  <span class="spec-pill">MySQL</span>
+                  <span class="spec-pill">Google Cloud Functions</span>
+                  <span class="spec-pill">Firestore</span>
+                  <span class="spec-pill">Gunicorn</span>
+                  <span class="spec-pill">Pandas</span>
+                </div>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Languages (Spoken)</span>
+                <div class="spec-pills">
+                  <span class="spec-pill">Tamil (Native)</span>
+                  <span class="spec-pill">English (Fluent)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="live-clock-card">
+              <span>Local Station Time:</span>
+              <span id="live-time" class="live-time-display">--:--:-- IST</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-counter">01 / PRODUCTION SYSTEMS</span>
+          <h2 class="section-title">Engineered Projects</h2>
+          <p class="section-subtitle">
+            Real systems built with attention to database constraints, secure authentication flows, automated data pipelines, and serverless synchronization.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          
+          <!-- Project 01: Attendance Management System -->
+          <article class="project-card">
+            <div class="project-inner">
+              <div class="project-content">
+                <div>
+                  <div class="project-meta-top">
+                    <span class="project-period">2023 – 2024</span>
+                    <span class="project-domain">Full-Stack Enterprise Web App</span>
+                  </div>
+
+                  <h3 class="project-title">Attendance Management System</h3>
+                  <p class="project-pitch">
+                    A comprehensive institutional tracking application engineered to automate student records, departmental reporting, and multi-tier role authorization.
+                  </p>
+
+                  <ul class="project-bullets">
+                    <li>
+                      <strong>Cryptographic Authentication:</strong> Designed defensive login flows featuring salted password hashing, stateful session management, and time-sensitive OTP-based verification.
+                    </li>
+                    <li>
+                      <strong>Automated Spreadsheet Ingestion & Reports:</strong> Built automated data pipelines using <code>Pandas</code> and <code>OpenPyxl</code> to ingest batch CSV rosters and output institutional attendance audits.
+                    </li>
+                    <li>
+                      <strong>Dynamic Administrative Portals:</strong> Architected separated Admin and Tutor dashboard experiences with real-time class attendance rate computation and threshold warnings.
+                    </li>
+                    <li>
+                      <strong>Production Reliability:</strong> Configured automated SMTP-based email alerts for low-attendance thresholds and deployed the WSGI service using <code>Gunicorn</code>.
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <div class="project-tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Flask</span>
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">Gunicorn</span>
+                    <span class="tech-tag">Pandas</span>
+                    <span class="tech-tag">OpenPyxl</span>
+                    <span class="tech-tag">OTP / SMTP</span>
+                    <span class="tech-tag">Bootstrap</span>
+                  </div>
+
+                  <div class="project-actions">
+                    <button class="btn btn-primary" onclick="openModal('modal-ams')">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                      <span>System Architecture</span>
+                    </button>
+                    <button class="btn btn-secondary" onclick="openModal('modal-ams-code')">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                      <span>Auth & Pipeline Code</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-media">
+                <img src="assets/images/attendance-dashboard.jpg" alt="Attendance Management System Dashboard UI Preview" class="project-img" loading="lazy">
+                <div class="media-overlay-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                  <span>Admin & Tutor Control View</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 02: Aittayya -->
+          <article class="project-card reversed">
+            <div class="project-inner">
+              <div class="project-content">
+                <div>
+                  <div class="project-meta-top">
+                    <span class="project-period">2024 – 2025</span>
+                    <span class="project-domain">Multilingual Civic & Tourism Platform</span>
+                  </div>
+
+                  <h3 class="project-title">Aittayya</h3>
+                  <p class="project-pitch">
+                    A bilingual civic assistant and transit navigation engine integrating conversational routing, Google Cloud serverless synchronization, and geospatial services.
+                  </p>
+
+                  <ul class="project-bullets">
+                    <li>
+                      <strong>State-Based Multilingual Chatbot:</strong> Developed a finite-state conversational chatbot handling route recommendations, user-intent parsing, and seamless toggle between <strong>Tamil (தமிழ்)</strong> and <strong>English</strong>.
+                    </li>
+                    <li>
+                      <strong>Real-Time NoSQL Store:</strong> Integrated Firebase Firestore for instant querying of municipal parking availability, bus schedules, and civil amenities.
+                    </li>
+                    <li>
+                      <strong>Event-Driven Serverless Sync:</strong> Built a Google Cloud Function that automatically synchronizes Google Sheets records directly into Firestore, empowering municipal personnel to update data without code.
+                    </li>
+                    <li>
+                      <strong>Geospatial Integration:</strong> Connected Google Maps APIs for live geolocation routing, bus terminus lookups, healthcare centers, and SOS emergency points.
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <div class="project-tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Flask</span>
+                    <span class="tech-tag">Firebase Firestore</span>
+                    <span class="tech-tag">Google Cloud Functions</span>
+                    <span class="tech-tag">Google Maps API</span>
+                    <span class="tech-tag">JavaScript ES6</span>
+                    <span class="tech-tag">Bilingual NLP</span>
+                  </div>
+
+                  <div class="project-actions">
+                    <button class="btn btn-primary" onclick="openModal('modal-aittayya')">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                      <span>Cloud Pipeline Architecture</span>
+                    </button>
+                    <button class="btn btn-secondary" onclick="openModal('modal-aittayya-bot')">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                      <span>Chatbot State Engine</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-media">
+                <img src="assets/images/aittayya-app.jpg" alt="Aittayya Civic Tourism Application Interface with Map and Chatbot" class="project-img" loading="lazy">
+                <div class="media-overlay-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon><line x1="9" y1="3" x2="9" y2="18"></line><line x1="15" y1="6" x2="15" y2="21"></line></svg>
+                  <span>Interactive Map & Bilingual Assistant</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Systems & Code Workbench -->
+    <section class="section" id="workbench">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-counter">02 / SYSTEMS & CODE WORKBENCH</span>
+          <h2 class="section-title">Under the Hood: Engineering Artifacts</h2>
+          <p class="section-subtitle">
+            Inspect real source code implementations spanning low-level x86-64 assembly, backend security logic, and serverless cloud event handling.
+          </p>
+        </div>
+
+        <div class="workbench-wrapper">
+          <div class="workbench-chrome">
+            <div class="chrome-dots">
+              <span class="chrome-dot dot-red"></span>
+              <span class="chrome-dot dot-yellow"></span>
+              <span class="chrome-dot dot-green"></span>
+            </div>
+            <div class="chrome-title">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+              <span>harish-ram-workbench :: interactive inspection</span>
+            </div>
+            <div></div>
+          </div>
+
+          <!-- Tab Bar -->
+          <div class="workbench-tabs" role="tablist">
+            <button class="wb-tab active" data-target="asm" role="tab" aria-selected="true">
+              <span class="wb-tab-icon">⚙️</span>
+              <span>fast_strlen.s (x86-64)</span>
+            </button>
+            <button class="wb-tab" data-target="auth" role="tab" aria-selected="false">
+              <span class="wb-tab-icon">🐍</span>
+              <span>auth_guard.py (Flask)</span>
+            </button>
+            <button class="wb-tab" data-target="cloud" role="tab" aria-selected="false">
+              <span class="wb-tab-icon">☁️</span>
+              <span>sheets_sync.py (GCP Func)</span>
+            </button>
+            <button class="wb-tab" data-target="gdb" role="tab" aria-selected="false">
+              <span class="wb-tab-icon">🐞</span>
+              <span>gdb_debug.log (Stack & Regs)</span>
+            </button>
+          </div>
+
+          <!-- Tab Content 1: x86-64 Assembly -->
+          <div class="workbench-viewport">
+            <div class="code-view active" id="view-asm">
+              <div class="code-line"><span class="line-number">1</span><span class="line-content"><span class="token-comment"># =========================================================================</span></span></div>
+              <div class="code-line"><span class="line-number">2</span><span class="line-content"><span class="token-comment"># Optimized x86-64 Routine: string length calculation with pointer math</span></span></div>
+              <div class="code-line"><span class="line-number">3</span><span class="line-content"><span class="token-comment"># ABI: RDI = char* str (first argument), RAX = return length in bytes</span></span></div>
+              <div class="code-line"><span class="line-number">4</span><span class="line-content"><span class="token-comment"># =========================================================================</span></span></div>
+              <div class="code-line"><span class="line-number">5</span><span class="line-content"><span class="token-directive">.global</span> <span class="token-function">fast_strlen</span></span></div>
+              <div class="code-line"><span class="line-number">6</span><span class="line-content"><span class="token-directive">.text</span></span></div>
+              <div class="code-line"><span class="line-number">7</span><span class="line-content"><span class="token-function">fast_strlen:</span></span></div>
+              <div class="code-line"><span class="line-number">8</span><span class="line-content">    <span class="token-keyword">xorq</span>    <span class="token-register">%rax</span>, <span class="token-register">%rax</span>          <span class="token-comment"># zero out return counter (%rax = 0)</span></span></div>
+              <div class="code-line"><span class="line-number">9</span><span class="line-content">    <span class="token-keyword">testq</span>   <span class="token-register">%rdi</span>, <span class="token-register">%rdi</span>          <span class="token-comment"># defensive null check on pointer</span></span></div>
+              <div class="code-line"><span class="line-number">10</span><span class="line-content">    <span class="token-keyword">jz</span>      <span class="token-function">.L_null_exit</span>        <span class="token-comment"># return 0 if str == NULL</span></span></div>
+              <div class="code-line"><span class="line-number">11</span><span class="line-content"></span></div>
+              <div class="code-line"><span class="line-number">12</span><span class="line-content"><span class="token-function">.L_loop:</span></span></div>
+              <div class="code-line"><span class="line-number">13</span><span class="line-content">    <span class="token-keyword">cmpb</span>    <span class="token-number">$0</span>, (<span class="token-register">%rdi</span>, <span class="token-register">%rax</span>)    <span class="token-comment"># compare byte at base %rdi + offset %rax with 0</span></span></div>
+              <div class="code-line"><span class="line-number">14</span><span class="line-content">    <span class="token-keyword">je</span>      <span class="token-function">.L_done</span>             <span class="token-comment"># null terminator found; return</span></span></div>
+              <div class="code-line"><span class="line-number">15</span><span class="line-content">    <span class="token-keyword">incq</span>    <span class="token-register">%rax</span>                <span class="token-comment"># increment counter</span></span></div>
+              <div class="code-line"><span class="line-number">16</span><span class="line-content">    <span class="token-keyword">jmp</span>     <span class="token-function">.L_loop</span></span></div>
+              <div class="code-line"><span class="line-number">17</span><span class="line-content"></span></div>
+              <div class="code-line"><span class="line-number">18</span><span class="line-content"><span class="token-function">.L_done:</span></span></div>
+              <div class="code-line"><span class="line-number">19</span><span class="line-content">    <span class="token-keyword">ret</span>                         <span class="token-comment"># return RAX (holds string length)</span></span></div>
+              <div class="code-line"><span class="line-number">20</span><span class="line-content"><span class="token-function">.L_null_exit:</span></span></div>
+              <div class="code-line"><span class="line-number">21</span><span class="line-content">    <span class="token-keyword">ret</span></span></div>
+            </div>
+
+            <!-- Tab Content 2: Python Flask Auth -->
+            <div class="code-view" id="view-auth">
+              <div class="code-line"><span class="line-number">1</span><span class="line-content"><span class="token-comment"># Attendance Management System: Defensive Authentication Guard</span></span></div>
+              <div class="code-line"><span class="line-number">2</span><span class="line-content"><span class="token-keyword">import</span> hashlib, secrets, smtplib</span></div>
+              <div class="code-line"><span class="line-number">3</span><span class="line-content"><span class="token-keyword">from</span> flask <span class="token-keyword">import</span> session, request, abort</span></div>
+              <div class="code-line"><span class="line-number">4</span><span class="line-content"></span></div>
+              <div class="code-line"><span class="line-number">5</span><span class="line-content"><span class="token-keyword">def</span> <span class="token-function">hash_password_with_salt</span>(password: str, salt: bytes = None) -> tuple[str, str]:</span></div>
+              <div class="code-line"><span class="line-number">6</span><span class="line-content">    <span class="token-keyword">if</span> salt <span class="token-keyword">is</span> <span class="token-keyword">None</span>:</span></div>
+              <div class="code-line"><span class="line-number">7</span><span class="line-content">        salt = secrets.token_bytes(<span class="token-number">32</span>)</span></div>
+              <div class="code-line"><span class="line-number">8</span><span class="line-content">    pwd_hash = hashlib.pbkdf2_hmac(<span class="token-string">'sha256'</span>, password.encode(<span class="token-string">'utf-8'</span>), salt, <span class="token-number">100_000</span>)</span></div>
+              <div class="code-line"><span class="line-number">9</span><span class="line-content">    <span class="token-keyword">return</span> pwd_hash.hex(), salt.hex()</span></div>
+              <div class="code-line"><span class="line-number">10</span><span class="line-content"></span></div>
+              <div class="code-line"><span class="line-number">11</span><span class="line-content"><span class="token-keyword">def</span> <span class="token-function">generate_and_dispatch_otp</span>(user_email: str, db_cursor) -> str:</span></div>
+              <div class="code-line"><span class="line-number">12</span><span class="line-content">    <span class="token-comment"># Generate cryptographically secure 6-digit verification code</span></span></div>
+              <div class="code-line"><span class="line-number">13</span><span class="line-content">    otp_code = str(secrets.randbelow(<span class="token-number">900000</span>) + <span class="token-number">100000</span>)</span></div>
+              <div class="code-line"><span class="line-number">14</span><span class="line-content">    db_cursor.execute(</span></div>
+              <div class="code-line"><span class="line-number">15</span><span class="line-content">        <span class="token-string">"REPLACE INTO otp_verification (email, otp, expires_at) VALUES (%s, %s, NOW() + INTERVAL 5 MINUTE)"</span>,</span></div>
+              <div class="code-line"><span class="line-number">16</span><span class="line-content">        (user_email, otp_code)</span></div>
+              <div class="code-line"><span class="line-number">17</span><span class="line-content">    )</span></div>
+              <div class="code-line"><span class="line-number">18</span><span class="line-content">    <span class="token-comment"># Dispatch via SMTP asynchronously</span></span></div>
+              <div class="code-line"><span class="line-number">19</span><span class="line-content">    send_smtp_notification(user_email, subject=<span class="token-string">"AMS Verification Code"</span>, body=f<span class="token-string">"Your OTP is: {otp_code}"</span>)</span></div>
+              <div class="code-line"><span class="line-number">20</span><span class="line-content">    <span class="token-keyword">return</span> otp_code</span></div>
+            </div>
+
+            <!-- Tab Content 3: GCP Cloud Function -->
+            <div class="code-view" id="view-cloud">
+              <div class="code-line"><span class="line-number">1</span><span class="line-content"><span class="token-comment"># Aittayya: Google Cloud Function (HTTP / Webhook trigger)</span></span></div>
+              <div class="code-line"><span class="line-number">2</span><span class="line-content"><span class="token-keyword">import</span> functions_framework, firebase_admin</span></div>
+              <div class="code-line"><span class="line-number">3</span><span class="line-content"><span class="token-keyword">from</span> firebase_admin <span class="token-keyword">import</span> credentials, firestore</span></div>
+              <div class="code-line"><span class="line-number">4</span><span class="line-content"></span></div>
+              <div class="code-line"><span class="line-number">5</span><span class="line-content"><span class="token-comment"># Initialize Firestore Client singleton</span></span></div>
+              <div class="code-line"><span class="line-number">6</span><span class="line-content"><span class="token-keyword">if</span> <span class="token-keyword">not</span> firebase_admin._apps:</span></div>
+              <div class="code-line"><span class="line-number">7</span><span class="line-content">    firebase_admin.initialize_app()</span></div>
+              <div class="code-line"><span class="line-number">8</span><span class="line-content">db = firestore.client()</span></div>
+              <div class="code-line"><span class="line-number">9</span><span class="line-content"></span></div>
+              <div class="code-line"><span class="line-number">10</span><span class="line-content">@functions_framework.http</span></div>
+              <div class="code-line"><span class="line-number">11</span><span class="line-content"><span class="token-keyword">def</span> <span class="token-function">sync_sheets_to_firestore</span>(request):</span></div>
+              <div class="code-line"><span class="line-number">12</span><span class="line-content">    payload = request.get_json(silent=<span class="token-keyword">True</span>) <span class="token-keyword">or</span> {}</span></div>
+              <div class="code-line"><span class="line-number">13</span><span class="line-content">    sheet_rows = payload.get(<span class="token-string">'parking_facilities'</span>, [])</span></div>
+              <div class="code-line"><span class="line-number">14</span><span class="line-content">    batch = db.batch()</span></div>
+              <div class="code-line"><span class="line-number">15</span><span class="line-content">    <span class="token-keyword">for</span> row <span class="token-keyword">in</span> sheet_rows:</span></div>
+              <div class="code-line"><span class="line-number">16</span><span class="line-content">        doc_ref = db.collection(<span class="token-string">'amenities'</span>).document(str(row[<span class="token-string">'id'</span>]))</span></div>
+              <div class="code-line"><span class="line-number">17</span><span class="line-content">        batch.set(doc_ref, {</span></div>
+              <div class="code-line"><span class="line-number">18</span><span class="line-content">            <span class="token-string">'name_en'</span>: row[<span class="token-string">'name'</span>],</span></div>
+              <div class="code-line"><span class="line-number">19</span><span class="line-content">            <span class="token-string">'name_ta'</span>: row[<span class="token-string">'name_tamil'</span>],</span></div>
+              <div class="code-line"><span class="line-number">20</span><span class="line-content">            <span class="token-string">'geo'</span>: firestore.GeoPoint(float(row[<span class="token-string">'lat'</span>]), float(row[<span class="token-string">'lng'</span>])),</span></div>
+              <div class="code-line"><span class="line-number">21</span><span class="line-content">            <span class="token-string">'slots_available'</span>: int(row.get(<span class="token-string">'free_slots'</span>, <span class="token-number">0</span>)),</span></div>
+              <div class="code-line"><span class="line-number">22</span><span class="line-content">            <span class="token-string">'updated_at'</span>: firestore.SERVER_TIMESTAMP</span></div>
+              <div class="code-line"><span class="line-number">23</span><span class="line-content">        }, merge=<span class="token-keyword">True</span>)</span></div>
+              <div class="code-line"><span class="line-number">24</span><span class="line-content">    batch.commit()</span></div>
+              <div class="code-line"><span class="line-number">25</span><span class="line-content">    <span class="token-keyword">return</span> {<span class="token-string">'status'</span>: <span class="token-string">'synchronized'</span>, <span class="token-string">'records'</span>: len(sheet_rows)}, <span class="token-number">200</span></span></div>
+            </div>
+
+            <!-- Tab Content 4: GDB Debug Session -->
+            <div class="code-view" id="view-gdb">
+              <div class="code-line"><span class="line-number">1</span><span class="line-content"><span class="token-comment">(gdb) target exec ./bin/sys_inspect</span></span></div>
+              <div class="code-line"><span class="line-number">2</span><span class="line-content"><span class="token-comment">(gdb) break fast_strlen</span></span></div>
+              <div class="code-line"><span class="line-number">3</span><span class="line-content"><span class="token-string">Breakpoint 1 at 0x401140: file fast_strlen.s, line 8.</span></span></div>
+              <div class="code-line"><span class="line-number">4</span><span class="line-content"><span class="token-comment">(gdb) run "National Engineering College"</span></span></div>
+              <div class="code-line"><span class="line-number">5</span><span class="line-content"><span class="token-string">Breakpoint 1, fast_strlen () at fast_strlen.s:8</span></span></div>
+              <div class="code-line"><span class="line-number">6</span><span class="line-content"><span class="token-comment">(gdb) info registers rdi rax rsp rbp</span></span></div>
+              <div class="code-line"><span class="line-number">7</span><span class="line-content"><span class="token-register">rax            0x0                 0</span></span></div>
+              <div class="code-line"><span class="line-number">8</span><span class="line-content"><span class="token-register">rdi            0x7fffffffe342      140737488347970</span>  <span class="token-comment"># points to input string</span></span></div>
+              <div class="code-line"><span class="line-number">9</span><span class="line-content"><span class="token-register">rsp            0x7fffffffe2f8      0x7fffffffe2f8</span></span></div>
+              <div class="code-line"><span class="line-number">10</span><span class="line-content"><span class="token-register">rbp            0x7fffffffe310      0x7fffffffe310</span></span></div>
+              <div class="code-line"><span class="line-number">11</span><span class="line-content"><span class="token-comment">(gdb) x/s $rdi</span></span></div>
+              <div class="code-line"><span class="line-number">12</span><span class="line-content"><span class="token-string">0x7fffffffe342: "National Engineering College"</span></span></div>
+              <div class="code-line"><span class="line-number">13</span><span class="line-content"><span class="token-comment">(gdb) finish</span></span></div>
+              <div class="code-line"><span class="line-number">14</span><span class="line-content"><span class="token-string">Value returned is $1 = 28</span></span></div>
+            </div>
+          </div>
+
+          <div class="workbench-footer">
+            <span>Encoding: UTF-8 • LF • x86-64 System V ABI Compliant</span>
+            <span>GDB / POSIX Linux Environment</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills & Technical Matrix -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-counter">03 / TECHNICAL CAPABILITIES</span>
+          <h2 class="section-title">Skills & Knowledge Matrix</h2>
+          <p class="section-subtitle">
+            An honest breakdown of technologies and domains I actively practice, with zero fluff or artificial percentage meters.
+          </p>
+        </div>
+
+        <div class="skills-matrix">
+          
+          <!-- Category 1: Systems & Low Level -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon-badge">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+              </div>
+              <div>
+                <h3 class="skill-category-title">Low-Level & Systems</h3>
+                <span class="skill-category-desc">Hardware-aware execution, memory & architecture</span>
+              </div>
+            </div>
+            <div class="skill-tags-list">
+              <div class="skill-item"><span class="skill-level-dot"></span><span>C Language</span></div>
+              <div class="skill-item"><span class="skill-level-dot"></span><span>X86-64 Assembly</span></div>
+              <div class="skill-item"><span class="skill-level-dot"></span><span>GDB (GNU Debugger)</span></div>
+              <div class="skill-item"><span class="skill-level-dot"></span><span>Computer Networking</span></div>
+              <div class="skill-item"><span class="skill-level-dot"></span><span>Memory Layout & Pointers</span></div>
+              <div class="skill-item"><span class="skill-level-dot"></span><span>POSIX / Linux Shell</span></div>
+            </div>
+          </div>
+
+          <!-- Category 2: Backend & Security Architecture -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon-badge">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+              </div>
+              <div>
+                <h3 class="skill-category-title">Backend & Security</h3>
+                <span class="skill-category-desc">Robust servers, authorization & production deployments</span>
+              </div>
+            </div>
+            <div class="skill-tags-list">
+              <div class="skill-item"><span class="skill-level-dot"></span><span>Python</span></div>
+              <div class="skill-item"><span class="skill-level-dot"></span><span>Flask Web Framework</span></div>
+              <div class="skill-item"><span class="skill-level-dot"></span><span>Gunicorn WSGI Server</span></div>
+              <div class="skill-item"><span class="skill-level-dot"></span><span>Session Auth & Hashing</span></div>
+              <div class="skill-item"><span class="skill-level-dot"></span><span>OTP & SMTP Verification</span></div>
+              <div class="skill-item"><span class="skill-level-dot"></span><span>RESTful API Design</span></div>
+            </div>
+          </div>
+
+          <!-- Category 3: Databases & Data Engineering -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon-badge">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+              </div>
+              <div>
+                <h3 class="skill-category-title">Databases & Data Pipelines</h3>
+                <span class="skill-category-desc">Relational schemas, NoSQL documents & ETL pipelines</span>
+              </div>
+            </div>
+            <div class="skill-tags-list">
+              <div class="skill-item"><span class="skill-level-dot"></span><span>MySQL (Schema, Indices, Views)</span></div>
+              <div class="skill-item"><span class="skill-level-dot"></span><span>Firebase Firestore</span></div>
+              <div class="skill-item"><span class="skill-level-dot"></span><span>Pandas (Data Wrangling)</span></div>
+              <div class="skill-item"><span class="skill-level-dot"></span><span>OpenPyxl (Excel Processing)</span></div>
+              <div class="skill-item"><span class="skill-level-dot"></span><span>CSV ETL Pipelines</span></div>
+            </div>
+          </div>
+
+          <!-- Category 4: Cloud, Frontend & Tools -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon-badge">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+              </div>
+              <div>
+                <h3 class="skill-category-title">Cloud, Frontend & Web</h3>
+                <span class="skill-category-desc">Serverless computing, APIs & accessible interfaces</span>
+              </div>
+            </div>
+            <div class="skill-tags-list">
+              <div class="skill-item"><span class="skill-level-dot"></span><span>Google Cloud Functions</span></div>
+              <div class="skill-item"><span class="skill-level-dot"></span><span>Google Maps JavaScript API</span></div>
+              <div class="skill-item"><span class="skill-level-dot"></span><span>JavaScript (ES6+)</span></div>
+              <div class="skill-item"><span class="skill-level-dot"></span><span>HTML5 Semantic Structure</span></div>
+              <div class="skill-item"><span class="skill-level-dot"></span><span>CSS3 & Responsive Design</span></div>
+              <div class="skill-item"><span class="skill-level-dot"></span><span>Git & GitHub Workflows</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & Academic Timeline -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-counter">04 / ACADEMIC BACKGROUND</span>
+          <h2 class="section-title">Education & Milestones</h2>
+          <p class="section-subtitle">
+            Formal foundations in Artificial Intelligence, Data Science, and Computer Engineering.
+          </p>
+        </div>
+
+        <div class="timeline-wrapper">
+          
+          <!-- Milestone 1 -->
+          <div class="timeline-card">
+            <div class="timeline-period">
+              <span class="timeline-years">2023 – 2027</span>
+              <span class="timeline-badge">Undergraduate Degree</span>
+            </div>
+            <div class="timeline-content">
+              <h3 class="timeline-institution">National Engineering College</h3>
+              <p class="timeline-degree">Bachelor of Technology in Artificial Intelligence & Data Science (AI & DS)</p>
+              <p class="timeline-details">
+                Focused on core computer science foundations, algorithms, data structures, relational and non-relational database management, computer networking, computer architecture, and applied machine learning models.
+              </p>
+            </div>
+          </div>
+
+          <!-- Milestone 2 -->
+          <div class="timeline-card">
+            <div class="timeline-period">
+              <span class="timeline-years">2020 – 2023</span>
+              <span class="timeline-badge">Higher Secondary & Secondary</span>
+            </div>
+            <div class="timeline-content">
+              <h3 class="timeline-institution">Kamlavati Senior Secondary School</h3>
+              <p class="timeline-degree">CBSE Board Certification</p>
+              <p class="timeline-details">
+                • <strong>Class XII (CBSE):</strong> First Class Distinction<br>
+                • <strong>Class X (CBSE):</strong> First Class Distinction
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Connect Section -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-card">
+          <h2 class="contact-title">Let's Build Something High-Impact</h2>
+          <p class="contact-desc">
+            Whether you're looking for an enthusiastic engineering intern, discussing systems architecture, or collaborating on open source, my inbox is always open.
+          </p>
+
+          <div class="contact-actions-bar">
+            <!-- Email Pill -->
+            <div class="contact-info-pill">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <a href="mailto:harishram2706@gmail.com">harishram2706@gmail.com</a>
+              <button class="copy-btn-inline" onclick="copyToClipboard('harishram2706@gmail.com', 'Email')" title="Copy Email">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
+
+            <!-- Phone Pill -->
+            <div class="contact-info-pill">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <a href="tel:+918838143041">+91 8838143041</a>
+              <button class="copy-btn-inline" onclick="copyToClipboard('+918838143041', 'Phone number')" title="Copy Phone">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
+
+            <!-- Download Resume -->
+            <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <span>Download Resume</span>
+            </a>
+
+            <!-- Compose Direct Mail -->
+            <a href="mailto:harishram2706@gmail.com?subject=Engineering%20Inquiry%20via%20Portfolio" class="btn btn-primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              <span>Send Message</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Harish Ram A N</strong> • Designed & handcrafted for GitHub Pages deployment.
+      </div>
+      <div>
+        Zero framework bloat • Pure semantic HTML, CSS & Vanilla JS.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================================================================
+       COMMAND PALETTE (Ctrl+K / Cmd+K)
+       =================================================================== -->
+  <div class="modal-backdrop" id="cmd-palette-backdrop" role="dialog" aria-modal="true" aria-label="Command Palette">
+    <div class="modal-dialog cmd-palette-dialog">
+      <div class="cmd-input-wrapper">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--text-muted);">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="cmd-input" class="cmd-search-input" placeholder="Type a command or jump to section..." autocomplete="off">
+        <span class="cmd-shortcut">ESC to exit</span>
+      </div>
+
+      <ul class="cmd-list" id="cmd-list">
+        <li class="cmd-group-title">Navigation</li>
+        <li class="cmd-item" data-action="#about" data-keywords="about intro bio summary home">
+          <div class="cmd-item-left">
+            <span>👤</span>
+            <span>About Harish Ram</span>
+          </div>
+          <span class="cmd-shortcut">Jump</span>
+        </li>
+        <li class="cmd-item" data-action="#projects" data-keywords="projects ams attendance aittayya code work">
+          <div class="cmd-item-left">
+            <span>🚀</span>
+            <span>Featured Projects</span>
+          </div>
+          <span class="cmd-shortcut">Jump</span>
+        </li>
+        <li class="cmd-item" data-action="#workbench" data-keywords="workbench code assembly x86 gdb flask python cloud">
+          <div class="cmd-item-left">
+            <span>⚙️</span>
+            <span>Systems & Code Workbench</span>
+          </div>
+          <span class="cmd-shortcut">Jump</span>
+        </li>
+        <li class="cmd-item" data-action="#skills" data-keywords="skills c assembly python mysql networking gdb stack">
+          <div class="cmd-item-left">
+            <span>🛠️</span>
+            <span>Technical Skills Matrix</span>
+          </div>
+          <span class="cmd-shortcut">Jump</span>
+        </li>
+        <li class="cmd-item" data-action="#education" data-keywords="education college school degree nec btech">
+          <div class="cmd-item-left">
+            <span>🎓</span>
+            <span>Education & Degrees</span>
+          </div>
+          <span class="cmd-shortcut">Jump</span>
+        </li>
+        <li class="cmd-item" data-action="#contact" data-keywords="contact email phone talk message hire">
+          <div class="cmd-item-left">
+            <span>📫</span>
+            <span>Contact Information</span>
+          </div>
+          <span class="cmd-shortcut">Jump</span>
+        </li>
+
+        <li class="cmd-group-title">Quick Actions</li>
+        <li class="cmd-item" data-action="resume" data-keywords="resume cv pdf download profile document education">
+          <div class="cmd-item-left">
+            <span>📄</span>
+            <span>View / Download Resume (resume.pdf)</span>
+          </div>
+          <span class="cmd-shortcut">Open</span>
+        </li>
+        <li class="cmd-item" data-action="copy-email" data-keywords="copy email address mail harishram">
+          <div class="cmd-item-left">
+            <span>📋</span>
+            <span>Copy Email Address (harishram2706@gmail.com)</span>
+          </div>
+          <span class="cmd-shortcut">Copy</span>
+        </li>
+        <li class="cmd-item" data-action="copy-phone" data-keywords="copy phone number mobile call">
+          <div class="cmd-item-left">
+            <span>📞</span>
+            <span>Copy Phone Number (+91 8838143041)</span>
+          </div>
+          <span class="cmd-shortcut">Copy</span>
+        </li>
+        <li class="cmd-item" data-action="theme" data-keywords="theme mode dark light switch toggle">
+          <div class="cmd-item-left">
+            <span>🌓</span>
+            <span>Toggle Dark / Light Theme</span>
+          </div>
+          <span class="cmd-shortcut">Toggle</span>
+        </li>
+        <li class="cmd-item" data-action="audio" data-keywords="audio sound mute click feedback">
+          <div class="cmd-item-left">
+            <span>🔊</span>
+            <span>Toggle Micro-Audio Clicks</span>
+          </div>
+          <span class="cmd-shortcut">Sound</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       MODAL: Attendance Management System Architecture
+       =================================================================== -->
+  <div class="modal-backdrop" id="modal-ams" role="dialog" aria-modal="true" aria-label="AMS System Architecture">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title">Attendance Management System — Architecture</h3>
+        <button class="modal-close-btn" onclick="closeModal('modal-ams')" aria-label="Close modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <p style="color:var(--text-secondary);margin-bottom:1rem;">
+          The system was built to eliminate manual register discrepancy in academic environments with automated CSV rosters, cryptographic authentication, and low-latency MySQL queries.
+        </p>
+
+        <h4 style="font-size:0.95rem;font-weight:700;margin-top:1.25rem;">Multi-Tier Architecture Diagram:</h4>
+        <pre class="arch-diagram-box">
+[ Client Web Browser ]
+        │  (HTTPS / Cookie Session)
+        ▼
+[ Gunicorn WSGI Server ]
+        │
+        ▼
+[ Flask Application Router ]
+   ├── /auth (Salted Hash Verification &amp; OTP Generator)
+   ├── /admin (Department Audit &amp; Tutor Assignment)
+   ├── /tutor (Daily Roll Call &amp; Percentage Computation)
+   └── /reports (Pandas + OpenPyxl CSV/XLSX Engine)
+        │
+        ▼
+[ MySQL Relational Database ]
+   ├── users (id, email, password_hash, salt, role)
+   ├── tutors (id, user_id, department, class_assigned)
+   ├── students (id, roll_no, name, dept_id)
+   ├── attendance_logs (id, student_id, date, status, tutor_id)
+   └── otp_tokens (id, email, otp_code, expires_at)
+        │
+        ▼
+[ SMTP Mailer Service ] ──&gt; (Dispatches alerts when attendance &lt; 75%)
+        </pre>
+
+        <h4 style="font-size:0.95rem;font-weight:700;margin-top:1rem;">Key Engineering Decisions:</h4>
+        <ul style="color:var(--text-secondary);font-size:0.9rem;padding-left:1.25rem;line-height:1.7;margin-top:0.5rem;">
+          <li><strong>Salted Password Hashes:</strong> Replaced plaintext authentication with PBKDF2 HMAC-SHA256 salted keys to prevent rainbow table attacks.</li>
+          <li><strong>Batched CSV Processing:</strong> Utilized <code>Pandas</code> vectorization rather than row-by-row iteration for processing semester attendance imports of 1,000+ students in sub-second time.</li>
+          <li><strong>Gunicorn WSGI:</strong> Configured multi-worker concurrency behind reverse proxy for high reliability during peak morning roll-call hours.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: AMS Auth Code Snippet -->
+  <div class="modal-backdrop" id="modal-ams-code" role="dialog" aria-modal="true" aria-label="AMS Auth Code">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title">AMS Authentication &amp; Reporting Service</h3>
+        <button class="modal-close-btn" onclick="closeModal('modal-ams-code')" aria-label="Close modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <p style="color:var(--text-secondary);margin-bottom:1rem;font-size:0.9rem;">
+          Implementation snippet for automated attendance calculation and CSV generation with Pandas:
+        </p>
+        <pre class="arch-diagram-box" style="color:#e2e8f0;">
+import pandas as pd
+from openpyxl.styles import PatternFill
+
+def generate_department_report(dept_id: str, db_connection):
+    query = """
+        SELECT s.roll_no, s.name, 
+               COUNT(a.id) as total_days,
+               SUM(CASE WHEN a.status = 'PRESENT' THEN 1 ELSE 0 END) as days_present
+        FROM students s
+        LEFT JOIN attendance_logs a ON s.id = a.student_id
+        WHERE s.dept_id = %s
+        GROUP BY s.id, s.roll_no, s.name
+    """
+    df = pd.read_sql(query, db_connection, params=[dept_id])
+    df['attendance_pct'] = (df['days_present'] / df['total_days'] * 100).round(2)
+    df['defaulter_flag'] = df['attendance_pct'] &lt; 75.0
+
+    # Export to formatted Excel workbook
+    output_path = f"/tmp/reports/{dept_id}_attendance.xlsx"
+    with pd.ExcelWriter(output_path, engine='openpyxl') as writer:
+        df.to_excel(writer, sheet_name='Summary', index=False)
+    return output_path
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       MODAL: Aittayya Architecture
+       =================================================================== -->
+  <div class="modal-backdrop" id="modal-aittayya" role="dialog" aria-modal="true" aria-label="Aittayya Architecture">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title">Aittayya — Cloud &amp; Geospatial Pipeline</h3>
+        <button class="modal-close-btn" onclick="closeModal('modal-aittayya')" aria-label="Close modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <p style="color:var(--text-secondary);margin-bottom:1rem;">
+          Aittayya bridges non-technical civic officers with public visitors through real-time Firestore synchronization and multilingual routing.
+        </p>
+
+        <h4 style="font-size:0.95rem;font-weight:700;margin-top:1.25rem;">Serverless Event Pipeline:</h4>
+        <pre class="arch-diagram-box">
+[ Municipal Officer ]
+        │  (Edits parking or bus timetable)
+        ▼
+[ Google Sheets Live Sheet ]
+        │  (Apps Script / Webhook Trigger on edit)
+        ▼
+[ Google Cloud Function (Serverless Python) ]
+        │  (Validates schema, converts Tamil/English strings)
+        ▼
+[ Firebase Firestore NoSQL Database ]
+   ├── /amenities (GeoPoint, type: parking | bus | hospital)
+   └── /routes (origin, destination, transit_modes, fares)
+        │  (Realtime WebSocket listener)
+        ▼
+[ Client Frontend Web Application ]
+   ├── Google Maps API (Renders live custom markers &amp; polyline paths)
+   └── Multilingual Chatbot (Intent parser &amp; Tamil/English translation)
+        </pre>
+
+        <h4 style="font-size:0.95rem;font-weight:700;margin-top:1rem;">Engineering Highlights:</h4>
+        <ul style="color:var(--text-secondary);font-size:0.9rem;padding-left:1.25rem;line-height:1.7;margin-top:0.5rem;">
+          <li><strong>Zero-Database CMS for Officials:</strong> Civic workers update spreadsheets they are familiar with; Google Cloud Functions automatically batch-commit the changes to Firestore in under 1 second.</li>
+          <li><strong>Bilingual Accessibility:</strong> Custom state machine resolves intent in both English and Tamil transliterations (e.g., recognizing "எக்மோர்" as "Egmore").</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Aittayya Chatbot State Machine -->
+  <div class="modal-backdrop" id="modal-aittayya-bot" role="dialog" aria-modal="true" aria-label="Aittayya Chatbot State Machine">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title">Aittayya — Conversational State Machine</h3>
+        <button class="modal-close-btn" onclick="closeModal('modal-aittayya-bot')" aria-label="Close modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <p style="color:var(--text-secondary);margin-bottom:1rem;font-size:0.9rem;">
+          Deterministic state-machine transitions handling language detection, intent categorization, and transit routing:
+        </p>
+        <pre class="arch-diagram-box" style="color:#e2e8f0;">
+class CivicChatEngine:
+    INTENTS = {
+        'ROUTING': ['route', 'bus', 'reach', 'பாதை', 'பேருந்து'],
+        'PARKING': ['park', 'vehicle', 'bike', 'கார்', 'பார்க்கிங்'],
+        'EMERGENCY': ['help', 'hospital', 'police', 'மருத்துவமனை']
+    }
+
+    def process_message(self, user_msg: str, session_lang: str):
+        detected_intent = self.resolve_intent(user_msg.lower())
+        if detected_intent == 'ROUTING':
+            return self.handle_route_lookup(user_msg, session_lang)
+        elif detected_intent == 'PARKING':
+            return self.fetch_nearest_parking(session_lang)
+        elif detected_intent == 'EMERGENCY':
+            return self.trigger_emergency_hotlines(session_lang)
+        return self.fallback_prompt(session_lang)
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- Main JavaScript File -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
